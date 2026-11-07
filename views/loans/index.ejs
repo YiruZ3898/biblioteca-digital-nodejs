@@ -1,0 +1,23 @@
+<h1>Mis préstamos</h1>
+
+<% loans.forEach(loan=> { %>
+    <article class="loan-card">
+        <h3><%= loan.title %></h3>
+
+        <p>Autor: <%= loan.author %></p>
+
+        <p>
+            Estado:
+
+            <% if (loan.status==='PENDING' ) { %>
+                🟡 Pendiente
+            <% } else if (loan.status==='APPROVED' ) { %>
+                🟢 Aprobado
+            <% } else if (loan.status==='RETURNED' ) { %>
+                🔵 Devuelto
+            <% } else if (loan.status==='REJECTED' ) { %>
+                🔴 Rechazado
+            <% } %>
+        </p>
+    </article>
+<% }) %>

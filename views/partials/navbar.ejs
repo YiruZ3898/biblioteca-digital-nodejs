@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand"
+           href="/">
+            Biblioteca Digital
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Mostrar navegación">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <div class="navbar-nav ms-auto">
+
+            <a class="nav-link"
+               href="/books">
+                Catálogo
+            </a>
+
+            <% if (user) { %>
+
+                <a class="nav-link"
+                   href="/loans/my-loans">
+                    Mis Préstamos
+                </a>
+
+            <% } %>
+
+            <% if (user && user.role === 'admin') { %>
+
+                <a class="nav-link"
+                   href="/books/new">
+                    Nuevo Libro
+                </a>
+
+                <a class="nav-link"
+                   href="/loans/admin">
+                    Panel de préstamos
+                </a>
+
+                <a class="nav-link"
+                   href="/users/admin">
+                    Gestión de Usuarios
+                </a>
+
+            <% } %>
+
+            <% if (!user) { %>
+
+                <a class="nav-link"
+                   href="/login">
+                    Iniciar Sesión
+                </a>
+
+                <a class="nav-link"
+                   href="/register">
+                    Registrarse
+                </a>
+
+            <% } %>
+
+            <% if (user) { %>
+
+                <a class="nav-link text-danger"
+                   href="/logout">
+                    Cerrar Sesión
+                </a>
+
+            <% } %>
+
+            </div>
+        </div>
+
+    </div>
+
+</nav>

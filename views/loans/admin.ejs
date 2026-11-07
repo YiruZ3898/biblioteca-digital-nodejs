@@ -1,0 +1,48 @@
+<h1>Gestión de préstamos</h1>
+
+<table>
+
+    <tr>
+        <th>ID</th>
+        <th>Usuario</th>
+        <th>Libro</th>
+        <th>Estado</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+    </tr>
+
+    <% loans.forEach(loan=> { %>
+        <tr>
+            <td><%= loan.id %></td>
+            <td><%= loan.username %></td>
+            <td><%= loan.title %></td>
+            <td>
+                <% if (loan.status==='PENDING' ) { %>
+                    Pendiente
+                <% } else if (loan.status==='APPROVED' ) { %>
+                    Aprobado
+                <% } else if (loan.status==='RETURNED' ) { %>
+                    Devuelto
+                <% } else if (loan.status==='REJECTED' ) { %>
+                    Rechazado
+                <% } %>
+            </td>
+            <td><%= loan.loan_date %></td>
+            <td>
+                <% if (loan.status==='PENDING' ) { %>
+                    <form action="/loans/approve/<%= loan.id %>" method="POST" class="d-inline">
+                        <button type="submit">Aprobar</button>
+                    </form>
+                <% } %>
+
+                <% if (loan.status==='APPROVED' ) { %>
+                    <form action="/loans/return/<%= loan.id %>" method="POST" class="d-inline">
+                        <button type="submit">Registrar devolución</button>
+                    </form>
+                <% } %>
+            </td>
+        </tr>
+    <% }) %>
+</table>
+
+<a href="/books">Volver al catálogo</a>

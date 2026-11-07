@@ -1,0 +1,29 @@
+<section class="book-detail">
+    <h1>Detalle del libro</h1>
+
+    <h2><%= book.title %></h2>
+
+    <p>Autor: <%= book.author %></p>
+
+    <p>Categoría: <%= book.category %></p>
+
+    <p>Descripción:</p>
+
+    <p><%= book.description %></p>
+
+    <p>
+        Disponibilidad:
+
+        <% if (book.available) { %>
+            Disponible ✅
+        <% } else { %>
+            Prestado ❌
+        <% } %>
+    </p>
+
+    <form action="/loans/request/<%= book.id %>" method="POST">
+        <button type="submit">Solicitar préstamo</button>
+    </form>
+
+    <a href="/books">Volver</a>
+</section>
