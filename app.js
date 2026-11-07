@@ -4,6 +4,7 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const expressLayouts = require("express-ejs-layouts");
 
+
 const bookRoutes = require("./routes/bookRoutes");
 const authRoutes = require("./routes/authRoutes");
 const loanRoutes = require("./routes/loanRoutes");
@@ -18,6 +19,7 @@ app.set("view engine", "ejs");
 app.use(expressLayouts);
 app.set("layout", "layouts/main");
 app.use(cookieParser());
+
 
 const jwt = require("jsonwebtoken");
 
