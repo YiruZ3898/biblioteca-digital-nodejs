@@ -1,0 +1,439 @@
+
+
+:root {
+    --ink: #17212b;
+    --muted: #667381;
+    --navy: #102a43;
+    --blue: #1666c5;
+    --blue-dark: #0e4e9b;
+    --surface: #ffffff;
+    --line: #dce5ee;
+    --page: #f3f7fb;
+    --shadow: 0 16px 40px rgba(16, 42, 67, .09);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f3f7fb 0%, #eaf2f8 100%);
+    color: var(--ink);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    background: var(--navy) !important;
+    box-shadow: 0 5px 22px rgba(16, 42, 67, .18);
+    padding: .85rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: .01em;
+    white-space: nowrap;
+}
+
+.navbar-toggler {
+    padding: .4rem .55rem;
+    border-color: rgba(255, 255, 255, .35);
+    border-radius: 7px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .2);
+}
+
+.navbar-nav {
+    align-items: center;
+    gap: .25rem;
+}
+
+.navbar .nav-link {
+    border-radius: 7px;
+    color: rgba(255, 255, 255, .78) !important;
+    padding: .5rem .75rem !important;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    background-color: rgba(255, 255, 255, .12);
+    color: #fff !important;
+}
+
+h1, h2, h3 {
+    color: var(--navy);
+    font-weight: 700;
+    letter-spacing: -.02em;
+}
+
+.page-content > h1,
+.page-content > h2,
+.page-content > h3,
+.page-content > table,
+.page-content > a,
+.page-content > form,
+.page-content > p,
+.page-content > hr {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1120px;
+}
+
+.page-content > h1 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero {
+    max-width: 860px;
+    margin: 2rem auto 0;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, rgba(16, 42, 67, .98), rgba(22, 102, 197, .92));
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    color: #fff;
+}
+
+.hero h1 {
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: rgba(255, 255, 255, .8);
+    font-size: 1.1rem;
+}
+
+.hero .btn {
+    margin: .25rem;
+    border: 0;
+    border-radius: 7px;
+    padding: .7rem 1.2rem;
+    font-weight: 600;
+}
+
+.book-card {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto 1.25rem;
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid rgba(220, 229, 238, .9);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(16, 42, 67, .06);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.book-card .book-card {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+}
+
+.book-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(16, 42, 67, .12);
+}
+
+.book-card h3 {
+    margin-bottom: .75rem;
+    font-size: 1.35rem;
+}
+
+.book-card p,
+.page-content > p {
+    color: var(--muted);
+}
+
+.btn-custom,
+button[type="submit"] {
+    background-color: var(--blue);
+    color: #fff;
+    border: 0;
+    border-radius: 7px;
+    padding: .65rem 1.1rem;
+    font-weight: 600;
+    transition: background-color .2s ease, transform .2s ease;
+}
+
+.btn-custom:hover,
+button[type="submit"]:hover {
+    background-color: var(--blue-dark);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.book-card .btn,
+.hero .btn {
+    margin: .2rem .25rem .2rem 0;
+}
+
+.form-card {
+    width: min(700px, calc(100% - 2rem));
+    margin: 3rem auto;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    background-color: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
+.form-card h1 {
+    margin-bottom: 1.75rem;
+    font-size: 2rem;
+}
+
+.form-card nav {
+    margin-bottom: 2rem;
+    color: var(--muted);
+}
+
+.form-card nav a,
+.page-content > a {
+    color: var(--blue);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-card nav a:hover,
+.page-content > a:hover {
+    color: var(--blue-dark);
+    text-decoration: underline;
+}
+
+.form-card form {
+    display: grid;
+    gap: .55rem;
+}
+
+.form-card label {
+    margin-top: .45rem;
+    color: var(--navy);
+    font-size: .92rem;
+    font-weight: 700;
+}
+
+.form-card input,
+.form-card textarea {
+    width: 100%;
+    padding: .72rem .85rem;
+    background: #fbfdff;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    color: var(--ink);
+    font: inherit;
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+    outline: 0;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(22, 102, 197, .14);
+}
+
+.form-card br {
+    display: none;
+}
+
+.form-card button {
+    justify-self: start;
+    margin-top: .75rem;
+}
+
+.page-content > table {
+    width: calc(100% - 2rem);
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.page-content > table th,
+.page-content > table td {
+    padding: 1rem 1.15rem;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+}
+
+.page-content > table th {
+    background: #edf4fa;
+    color: var(--navy);
+    font-size: .8rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.page-content > table tr:last-child td {
+    border-bottom: 0;
+}
+
+.page-content > table tr:hover td {
+    background: #f8fbfe;
+}
+
+.page-content > table button {
+    padding: .45rem .8rem;
+    font-size: .9rem;
+}
+
+.status-available {
+    color: #177245;
+    font-weight: 700;
+}
+
+.status-unavailable {
+    color: #b42318;
+    font-weight: 700;
+}
+
+.book-detail,
+.loan-card {
+    max-width: 860px;
+    margin: 0 auto 1.25rem;
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(16, 42, 67, .06);
+}
+
+.book-detail h1,
+.loan-card h3 {
+    margin-bottom: 1rem;
+}
+
+.book-detail p,
+.loan-card p {
+    color: var(--muted);
+}
+
+.book-detail form {
+    display: inline-block;
+    margin: .75rem 1rem .75rem 0;
+}
+
+.site-footer {
+    background: var(--navy);
+    color: rgba(255, 255, 255, .72);
+    font-size: .9rem;
+}
+
+.error-page {
+    max-width: 760px;
+    margin: 2rem auto;
+}
+
+.error-code {
+    color: var(--blue);
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.error-details {
+    max-width: 100%;
+    padding: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--muted);
+}
+
+.error-details pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+.users-page {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.users-page .table-responsive {
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.users-page .table {
+    min-width: 720px;
+}
+
+.users-page .table th {
+    background: #edf4fa;
+    color: var(--navy);
+    font-size: .8rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.users-page .table th,
+.users-page .table td {
+    padding: 1rem 1.15rem;
+    border-color: var(--line);
+}
+
+.users-page .table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .users-page .table-responsive {
+        overflow-x: auto;
+    }
+
+    .users-page .table th,
+    .users-page .table td {
+        padding: .75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: .7rem 0;
+    }
+
+    .navbar-collapse {
+        padding-top: .75rem;
+    }
+
+    .navbar-nav {
+        align-items: stretch;
+        gap: .15rem;
+    }
+
+    .navbar .nav-link {
+        padding: .7rem .8rem !important;
+    }
+
+    .hero {
+        padding: 4rem 1.25rem;
+    }
+
+    .page-content > table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    body > table th,
+    body > table td {
+        padding: .75rem;
+    }
+}
