@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const isAdmin = require("../middlewares/admin");
-const verifyToken = require("../middlewares/auth");
+const isAdmin = require("../middlewares/admin.js");
+const verifyToken = require("../middlewares/auth.js");
 
 const {
   getAllBooks,

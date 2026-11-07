@@ -1,6 +1,6 @@
 const express = require("express");
-const verifyToken = require("../middlewares/auth");
-const isAdmin = require("../middlewares/admin");
+const verifyToken = require("../middlewares/auth.js");
+const isAdmin = require("../middlewares/admin.js");
 const {
   getUsersPage,
   changeRole,

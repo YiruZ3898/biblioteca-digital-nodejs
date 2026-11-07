@@ -5,19 +5,19 @@ const cookieParser = require("cookie-parser");
 const expressLayouts = require("express-ejs-layouts");
 
 
-const bookRoutes = require("./routes/bookRoutes");
-const authRoutes = require("./routes/authRoutes");
-const loanRoutes = require("./routes/loanRoutes");
-const userRoutes = require("./routes/userRoutes");
-const verifyToken = require("./middlewares/auth");
-const isAdmin = require("./middlewares/admin");
-const errorHandler = require("./middlewares/errorHandler");
+const bookRoutes = require("./routes/bookRoutes.js");
+const authRoutes = require("./routes/authRoutes.js");
+const loanRoutes = require("./routes/loanRoutes.js");
+const userRoutes = require("./routes/userRoutes.js");
+const verifyToken = require("./middlewares/auth.js");
+const isAdmin = require("./middlewares/admin.js");
+const errorHandler = require("./middlewares/errorHandler.js");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(expressLayouts);
-app.set("layout", "layouts/main");
+app.set("layout", "layouts/main.ejs");
 app.use(cookieParser());
 
 

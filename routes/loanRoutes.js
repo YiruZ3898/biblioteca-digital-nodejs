@@ -1,9 +1,9 @@
 const express = require("express");
-const isAdmin = require("../middlewares/admin");
+const isAdmin = require("../middlewares/admin.js");
 
 const router = express.Router();
 
-const verifyToken = require("../middlewares/auth");
+const verifyToken = require("../middlewares/auth.js");
 
 const { requestLoan, getMyLoans,
         getAllLoans,approveLoan,
