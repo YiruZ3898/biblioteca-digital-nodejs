@@ -8,7 +8,7 @@ const {
   register,
   login,
   logout,
-} = require("../controllers/authController");
+} = require("../controllers/authController.js");
 
 router.get("/register", showRegisterForm);
 

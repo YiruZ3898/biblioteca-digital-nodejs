@@ -9,7 +9,7 @@ const { requestLoan, getMyLoans,
         getAllLoans,approveLoan,
         returnLoan
 
- } = require("../controllers/loanController");
+ } = require("../controllers/loanController.js");
 
 router.post("/request/:bookId", verifyToken, requestLoan);
 

@@ -1,4 +1,4 @@
-const pool = require("../config/database");
+const pool = require("../config/database.js");
 
 const requestLoan = async (userId, bookId) => {
   const existingLoan = await pool.query(

@@ -12,7 +12,7 @@ const {
   showEditForm,
   updateBook,
   
-} = require("../controllers/bookController");
+} = require("../controllers/bookController.js");
 
 router.get("/", getAllBooks);
 

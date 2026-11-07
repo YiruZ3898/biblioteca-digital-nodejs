@@ -4,7 +4,7 @@ const isAdmin = require("../middlewares/admin.js");
 const {
   getUsersPage,
   changeRole,
-} = require("../controllers/userController");
+} = require("../controllers/userController.js");
 
 const router = express.Router();
 
