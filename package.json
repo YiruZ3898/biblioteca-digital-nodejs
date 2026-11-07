@@ -1,9 +1,11 @@
 {
-  "name": "proyecto-final-node.js - Biblioteca Digitals",
+  "name": "proyecto-final-node.js-Biblioteca Digitals",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sistema de gestión bibliotecaria desarrollado con Node.js, Express, PostgreSQL y JWT.",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
