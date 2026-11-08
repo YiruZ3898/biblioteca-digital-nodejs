@@ -112,3 +112,61 @@ La aplicación implementa autenticación mediante JSON Web Tokens (JWT), control
 ![Usuarios](capturas/usuarios.png)
 
 ---
+
+## Enlace en Producción
+
+Tenemos un despliegue funcional de la aplicación:
+
+URL:https://biblioteca-digita.elrincondeldeploy.prod.page
+
+---
+
+## Instalación Local
+
+### 1. Clonar el repositorio
+
+```bash
+git clone URL_DEL_REPOSITORIO
+```
+
+### 2. Entrar al proyecto
+
+```bash
+cd proyecto-final
+```
+
+### 3. Instalar dependencias
+
+```bash
+npm install
+```
+
+### 4. Configurar variables de entorno
+
+Crear un archivo `.env`:
+
+```env
+DATABASE_URL=tu_cadena_de_conexion
+JWT_SECRET=tu_clave_secreta
+NODE_ENV=development
+```
+
+### 5. Ejecutar la aplicación
+
+```bash
+npm start
+```
+
+La aplicación estará disponible en:
+
+```text
+http://localhost:3000
+```
+
+---
+
+## Autor
+
+**Thiago Herrera De La Cruz**
+
+Proyecto Final de la asignatura Optativa Node.js.
